@@ -1,12 +1,18 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+
+import Home from './Home'
+import Trivia from './Trivia'
 
 function App() {
   return (
     <>
-      <header className="header">
-        <h1>My Collection</h1>
-      </header>
-      <section className="main">{/* add your code here */}</section>
+      <section className="main">
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/Trivia' element={<Trivia />}/>
+        </Routes>  
+      </section>
     </>
   )
 }
