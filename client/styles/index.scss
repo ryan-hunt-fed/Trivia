@@ -28,11 +28,91 @@ html, body {
       }
   }
 
-  button .correct{
+  .correct{
     background-color: greenyellow;
+    font-size: 28px;
+    border-radius: 3px;
+    color: white;
   }
 
-  button .wrong{
+ .wrong{
     background-color: red;
+    font-size: 28px;
+    border-radius: 3px;
+    color: white;
   }
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-header{
+    font-size: 48px;
+  }
+
+  .start{
+    font-size: 28px;
+    border-radius: 3px;
+    background-color: #ee7752;
+    color: white
+  }
+
+  .question-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .question{
+    font-size: 28px;
+    width: 600px;
+    text-align: center;
+  }
+
+  .category{
+    font-size: 28px;
+  }
+
+  .answers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+  }
+
+  .normal-answers{
+    font-size: 28px;
+    border-radius: 3px;
+    background-color:rgb(158, 81, 167);
+    color: white;
+
+  }
+
+  .return{
+    font-size: 28px;
+    border-radius: 3px;
+    color: white;
+    background-color: cadetblue;
+  }
+
+
+  .timebar div {
+    height: 5px;
+    background: linear-gradient(to bottom, red, #900);
+    animation: roundtime calc(var(--duration) * 1s) steps(var(--duration)) forwards;
+    transform-origin: left center;
+  }
+
+  @keyframes roundtime {
+    to {
+      /* More performant than animating `width` */
+      transform: scaleX(0);
+    }
+  }
+
+
   

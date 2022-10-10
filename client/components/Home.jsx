@@ -10,10 +10,10 @@ function Home() {
   return (
     <>
       <section className="main">
-        <h1>Trivia Night!!</h1>
-       <p>hello world</p>
+        <h1 className='main-header'>Trivia Night!!</h1>
+       <p className='description'>Welcome to Trivia Night, a load of questions from the OpenTDB API. Lets begin by hitting the button below!!</p>
        <Link to='/trivia'>
-       <button>Start Game</button>
+       <button className='start'>Start Game</button>
        </Link>
        
        
