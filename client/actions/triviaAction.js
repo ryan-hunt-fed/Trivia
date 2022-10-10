@@ -1,9 +1,10 @@
-import {getTriviaDataApi} from '../apis/triviaApi'
+import { getTriviaDataApi } from '../apis/triviaApi'
 
-const SHOW_TRIVIA = 'SHOW_TRIVIA'
+export const SHOW_TRIVIA = 'SHOW_TRIVIA'
 
 //action
 export function showTrivia(data) {
+    console.log(data, 'show')
     return {
         type: SHOW_TRIVIA,
         payload: data
@@ -16,6 +17,7 @@ export function thunkTrivia(){
     return (dispatch) => {
         return getTriviaDataApi()
         .then((data) => {
+            console.log(data, 'from thunk')
             dispatch(showTrivia(data))
         })
     }
